@@ -16,13 +16,19 @@
   });
 
   window.add_room({
+    exits: {
+      north: {
+        path: "red_room",
+        locked: false
+      }
+    },
     items: {
       table: yellow_table,
       key: key
     },
     description: "You are in a pale green room. A light hums faintly.\n" +
                  "There is a yellow table in the middle of the floor.\n" +
-                 "There are no exits.",
+                 "There is an exit to the north.",
     name: "default_room"
   });
 }());

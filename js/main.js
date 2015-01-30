@@ -39,6 +39,16 @@
             console.log("There's no " + item + " here...");
           }
         }
+      },
+
+      go: function (direction) {
+        try {
+          var exit = this.currentRoom.exits[direction];
+          this.currentRoom = window.rooms[exit.path];
+          this.look();
+        } catch(e) {
+          console.log("you can't go " + direction + ".");
+        }
       }
     };
 
@@ -51,6 +61,12 @@
       window.lookAt = window.look;
       window.take = function (item) { game.take(item); };
       window.inventory = function () { return game.inventory; };
+
+      window.go     = function (direction) { game.go(direction); };
+      window.north  = function () { window.go('north'); };
+      window.south  = function () { window.go('south'); };
+      window.east   = function () { window.go('east'); };
+      window.west   = function () { window.go('west'); };
 
       window.help = function () {
         console.log("Current Commands");

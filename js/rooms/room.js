@@ -1,7 +1,7 @@
 (function(){
   var defaults = {
-    exits: [],
-    items: [],
+    exits: {},
+    items: {},
     description: "You are in a room, there are no exits."
   };
 
