@@ -1,5 +1,5 @@
 (function(){
-  window.add_room({
+  game.addRoom({
     exits: {
       south: {
         path: "default_room",
