@@ -17,9 +17,10 @@
     publicMethods : function () {
       var self = this;
 
-      global.look = function (item) { self.look(item); };
+      global.look   = function (item) { self.look(item); };
       global.lookAt = global.look;
-      global.take = function (item) { self.take(item); };
+      
+      global.take   = function (item) { self.take(item); };
       global.inventory = function () { return self.inventory; };
 
       global.go     = function (direction) { self.go(direction); };
